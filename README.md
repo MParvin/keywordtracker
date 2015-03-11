@@ -1,4 +1,6 @@
-Alle Informationen, Screenshots unter: <a href="http://blog.damianschwyrz.de/seo-keyword-monitor-and-tracker/">http://blog.damianschwyrz.de/seo-keyword-monitor-and-tracker/</a>
+Author: Damian Schwyrz
+URL: <a href="http://blog.damianschwyrz.de/">damianschwyrz.de</a>
+More: <a href="http://blog.damianschwyrz.de/seo-keyword-monitor-and-tracker/">Detailsseite zum Tracker (Screenshots, Infos,...)</a>
 
 <h1>Installationsanweisungen</h1>
 
