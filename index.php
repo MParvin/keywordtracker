@@ -5,7 +5,7 @@
 * Author: Damian Schwyrz
 * URL: http://damianschwyrz.de
 * More: http://blog.damianschwyrz.de/seo-keyword-monitor-and-tracker/
-* Last update: 2015/03/09
+* Last update: 2015/03/11
 *
 */
 
