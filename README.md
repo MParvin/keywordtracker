@@ -1,3 +1,5 @@
+<h1>Installationsanweisungen</h1>
+
 1. Vor dem hochladen müssen die folgenden Dateien bearbeitet werden:
 – includes/config.php
 – install/seotracker.pl
