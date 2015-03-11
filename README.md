@@ -1,7 +1,7 @@
-Author: Damian Schwyrz
-URL: <a href="http://blog.damianschwyrz.de/">damianschwyrz.de</a>
+Author: Damian Schwyrz<br />
+URL: <a href="http://blog.damianschwyrz.de/">damianschwyrz.de</a><br />
 More: <a href="http://blog.damianschwyrz.de/seo-keyword-monitor-and-tracker/">Detailsseite zum Tracker (Screenshots, Infos,...)</a>
-
+<br /><br />
 <h1>Installationsanweisungen</h1>
 
 <h2>Dateien bearbeiten</h2>
