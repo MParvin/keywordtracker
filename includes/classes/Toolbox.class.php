@@ -23,7 +23,7 @@ class Toolbox
     self::saveKeyword();
     self::deleteKeyword();
     self::saveSettings();
-	self::doCommentBox();
+	  self::doCommentBox();
     self::doCSVExport();
   }
 
@@ -56,6 +56,9 @@ class Toolbox
           {
             if( !isset($row['error']) )
             {
+              if( $row['kwPos'] == 0 ) {
+                $row['kwPos'] = '';
+              }
               fputcsv($fp, $row);
             }
           }
@@ -731,9 +734,10 @@ class Toolbox
 
   private function bestPosition($kwID)
   {
-    $query = "SELECT MIN(kwPos) as kwPos FROM seotracker_rankings WHERE kwID=$kwID AND kwPos IS NOT NULL";
+    $query = "SELECT MIN(kwPos) as kwPos FROM seotracker_rankings WHERE kwID=$kwID AND kwPos > 0";
     $this->DB->setQuery($query);
     $result = $this->DB->getRow();
+
     return $result['kwPos'];
   }
 
@@ -1221,15 +1225,18 @@ tickRenderer: $.jqplot.CanvasAxisTickRenderer,
       {
         foreach($results as $result)
         {
+          if( $result['kwPos'] == 0 ) 
+          {
+            $result['kwPos'] = 'null';
+          }
           $values[] = '["'.$result['kwTime'].'",'.$result['kwPos'].']';
-
         }
 
       } 
       else
       {
         $dt = new DateTime;
-        $values = array('["'.$dt->format('Y-m-d').'",0]');
+        $values = array('["'.$dt->format('Y-m-d').'",null]');
       }
 
       $this->jqPlot_data = $values;
