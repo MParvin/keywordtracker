@@ -31,3 +31,7 @@ Hier wird zu jeder vollen Stunde das Script ausgeführt. Die absoluten Pfade mü
 
 <h3>Hinweise</h3>
 Das Script ist für Leute gedacht, die einen eigenen Server betreiben und dort SSH-Zugriff haben. Bei einigen Webhostern lassen sich auch PERL-Dateien ausführen. Wer einen managed Server mietet,, der muss ggf. mit dem Betreiber sprechen damit die Pakete nachinstalliert werden. Wer Lust hat, kann das PERL-Script auch mit PHP und CURL nachbilden. Dann wird das Programm auch auf jedem Webhoster laufen, der normale PHP Cronjobs erlaubt!
+
+<h3>Screenshots</h3>
+<img src="http://blog.damianschwyrz.de/wp-content/uploads/2014/09/ranking.png">
+<img src="http://blog.damianschwyrz.de/wp-content/uploads/2014/09/Keyword-Index-Keyword-Tracker.jpg">
