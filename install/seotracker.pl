@@ -36,7 +36,7 @@ while($query_handle->fetch())
  my $req = HTTP::Request->new(GET => 'https://www.google.de/search?oe=utf-8&pws=0&complete=0&hl=de&num=100&q='.uri_escape($kwtext));
  my $res = $ua->request($req);
  if ($res->is_success) {
- my @con = $res->content =~ /<li class=\"g\"(.+?)<\/li>/gi;
+ my @con = $res->content =~ /<(div|li) class=\"g\"(.+?)<\/(div|li)>/gi;
  my $i = 1;
  my $found = 0;
 
@@ -50,16 +50,17 @@ while($query_handle->fetch())
    $found = 1;
    $url_1 = $connect->quote($all[3]);
    $posi  = int($all[4]);
-   $query1 = "INSERT INTO seotracker_rankings (kwID,kwPos,kwURL) VALUES ($kwID,$posi,$url_1)";
-
-   $query_handle1 = $connect->prepare($query1);
-   $query_handle1->execute() || dberror ("Fehler im 1. Insert: $DBI::errstr");
-   $query_handle1->finish();
-   $query1 = "UPDATE seotracker_keywords SET kwUpdated='".get_time('iso')."' WHERE kwID=$kwID LIMIT 1";
-   $query_handle1 = $connect->prepare($query1);
-   $query_handle1->execute() || dberror ("Fehler im 1. Update: $DBI::errstr");
-   $query_handle1->finish();
-
+   
+   if( $posi != 0 ) {
+    $query1 = "INSERT INTO seotracker_rankings (kwID,kwPos,kwURL) VALUES ($kwID,$posi,$url_1)";
+    $query_handle1 = $connect->prepare($query1);
+    $query_handle1->execute() || dberror ("Fehler im 1. Insert: $DBI::errstr");
+    $query_handle1->finish();
+    $query1 = "UPDATE seotracker_keywords SET kwUpdated='".get_time('iso')."' WHERE kwID=$kwID LIMIT 1";
+    $query_handle1 = $connect->prepare($query1);
+    $query_handle1->execute() || dberror ("Fehler im 1. Update: $DBI::errstr");
+    $query_handle1->finish();
+   }
    #print "Gefunden fur $pURL: $kwtext ($kwID) auf Position $posi ($url_1) - ". get_time('iso'). "\n";
    last;
   } 
