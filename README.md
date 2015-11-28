@@ -1,5 +1,6 @@
 <h1>Update - 28.11.2015</h1>
 Neue Version mit mehr Funktionen verfügbar: <a href="https://github.com/Damian89/seotool">SEO Tool v2</a>
+<hr />
 <br />
 Author: Damian Schwyrz<br />
 URL: <a href="http://blog.damianschwyrz.de/">damianschwyrz.de</a><br />
