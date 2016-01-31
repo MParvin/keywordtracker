@@ -3,8 +3,8 @@ Neue Version mit mehr Funktionen verfügbar: <a href="https://github.com/Damian8
 <hr />
 <br />
 Author: Damian Schwyrz<br />
-URL: <a href="http://blog.damianschwyrz.de/">damianschwyrz.de</a><br />
-More: <a href="http://blog.damianschwyrz.de/seo-keyword-monitor-and-tracker/">Detailsseite zum Tracker (Screenshots, Infos,...)</a>
+URL: <a href="https://www.damianschwyrz.de/">Webentwickler</a><br />
+More: <a href="https://www.damianschwyrz.de/seo-keyword-monitor-and-tracker/">Detailsseite zum Tracker (Screenshots, Infos,...)</a>
 <br /><br />
 <h1>Installationsanweisungen</h1>
 
@@ -37,5 +37,5 @@ Hier wird zu jeder vollen Stunde das Script ausgeführt. Die absoluten Pfade mü
 Das Script ist für Leute gedacht, die einen eigenen Server betreiben und dort SSH-Zugriff haben. Bei einigen Webhostern lassen sich auch PERL-Dateien ausführen. Wer einen managed Server mietet,, der muss ggf. mit dem Betreiber sprechen damit die Pakete nachinstalliert werden. Wer Lust hat, kann das PERL-Script auch mit PHP und CURL nachbilden. Dann wird das Programm auch auf jedem Webhoster laufen, der normale PHP Cronjobs erlaubt!
 
 <h3>Screenshots</h3>
-<img src="http://blog.damianschwyrz.de/wp-content/uploads/2014/09/ranking.png">
-<img src="http://blog.damianschwyrz.de/wp-content/uploads/2014/09/Keyword-Index-Keyword-Tracker.jpg">
+<img src="https://www.damianschwyrz.de/wp-content/uploads/2014/09/ranking.png">
+<img src="https://www.damianschwyrz.de/wp-content/uploads/2014/09/Keyword-Index-Keyword-Tracker.jpg">
