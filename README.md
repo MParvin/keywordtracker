@@ -1,40 +1,33 @@
-<h1>Update - 28.11.2015</h1>
-Neue Version mit mehr Funktionen verfügbar: <a href="https://github.com/Damian89/seotool">SEO Tool v2</a>
-<hr />
-<br />
-Author: Damian Schwyrz<br />
-URL: <a href="https://www.damianschwyrz.de/">Webentwickler</a><br />
-More: <a href="https://www.damianschwyrz.de/seo-keyword-monitor-and-tracker/">Detailsseite zum Tracker (Screenshots, Infos,...)</a>
-<br /><br />
-<h1>Installationsanweisungen</h1>
+<h1>Installation Instructions</h1>
 
-<h2>Dateien bearbeiten</h2>
-Vor dem hochladen müssen die folgenden Dateien bearbeitet werden:
-– includes/config.php
-– install/seotracker.pl
+<h2>Edit files</h2>
+Before uploading, the following files must be edited: 
+-includes / config.php 
+-install / seotracker.pl
 
-In beiden Dateien müssen die Zugangsdaten zur mySQL-DB eingetragen werden. Außerdem kleinere Anpassungen, wie etwa die URL zum Tracker.
+The access data for the mySQL DB must be entered in both files. Also minor adjustments, such as the URL to the tracker.
 
-<h2>Dateien hochladen</h2>
-Dateien ins Wunschverzeichnis hochladen
+<h2>Upload files</h2>
+Upload files to the desired directory
 
-<h2>mySQL-Dump importieren</h2> 
-Im Ordner install/ befindet sich die full.sql – diese Datei importiert man in die eigene Datenbank
+<h2>Import mySQL dump</h2> 
+In the install / folder is the full.sql - this file is imported into your own database
+Move PERL script
 
-<h2>PERL-Script verschieben</h2>
-Die seotracker.pl sollte umbenannt oder verschoben werden, damit sie nicht im Standardverzeichnis install/ zu finden ist. Wenn das vergessen wird, wird sich jeder diese Datei mit den Zugangsdaten herunterladen können, wenn er die URL zum Tracker kennt. Legt euch ein weiteres Verzeichnis an und packt sie dort hin!
+<h2>Move PERL script</h2>
+The seotracker.pl should be renamed or moved so that it can not be installed / found in the default directory. If this is forgotten, everyone will be able to download this file with the access data if they know the URL to the tracker. Make another directory and grab it there!
 
-<h2>Cronjob anlegen</h2>
-Der Punkt ist wichtig. Es muss ein Cronjob angelegt werden, der JEDE STUNDE ausgeführt wird, im einfachsten Fall schaut das in etwa so aus:
-0 * * * * perl /absoluter/pfad/zur/perldatei/seotracker.pl > /eventuell/eine/log/datei.log 2&>1
+<h2>Apply Cronjob</h2>
+The point is important. It must be created a Cronjob, which is run EVERY HOUR, in the simplest case looks like this: 
+0 * * * * perl /absoluter/pfad/zur/perldra//seotracker.pl> / possibly / a / log / file .log 2 &> 1
 
-Hier wird zu jeder vollen Stunde das Script ausgeführt. Die absoluten Pfade müssen natürlich angepasst werden. Was auch sicher gestellt werden muss:
-– Ausführbarkeit der Datei für den Nutzer, der den Cronjob ausführt
-– Generelle Verfügbarkeit der oben genannten PERL-Pakete
-– Eingetragen werden muss der absolute Pfad, nicht die URL zur Datei oder relative Pfade – damit wird der Cronjob-Dienst wenig anfangen können
+Here the script is executed every hour. The absolute paths have to be adjusted naturally. What should also be ensured: - Executability of the file for the user who runs the cronjob 
+-General availability of the above PERL packages 
+-The absolute path, not the URL to the file or relative paths must be entered 
+-Service can start little
 
-<h3>Hinweise</h3>
-Das Script ist für Leute gedacht, die einen eigenen Server betreiben und dort SSH-Zugriff haben. Bei einigen Webhostern lassen sich auch PERL-Dateien ausführen. Wer einen managed Server mietet,, der muss ggf. mit dem Betreiber sprechen damit die Pakete nachinstalliert werden. Wer Lust hat, kann das PERL-Script auch mit PHP und CURL nachbilden. Dann wird das Programm auch auf jedem Webhoster laufen, der normale PHP Cronjobs erlaubt!
+<h3>Hints</h3>
+The script is intended for people who run their own server and have SSH access there. Some web hosters can also run PERL files. Who rents a managed server, who may have to talk with the operator so the packages are installed. If you are interested, you can copy the PERL script with PHP and CURL. Then the program will also run on any web host that allows normal PHP cronjobs!
 
 <h3>Screenshots</h3>
 <img src="https://www.damianschwyrz.de/wp-content/uploads/2014/09/ranking.png">
